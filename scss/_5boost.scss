@@ -1,0 +1,22 @@
+#boost {
+  padding: 4rem 0;
+  background-color: $darkViolet;
+  background-image: url("../images/bg-boost-mobile.svg");
+  background-size: cover;
+  text-align: center;
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  button {
+    @include ctaGetStarted;
+    margin-top: 1rem;
+  }
+
+  @media screen and (min-width: 30rem) {
+    background-image: url("../images/bg-boost-desktop.svg");
+  }
+}

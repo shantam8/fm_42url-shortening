@@ -1,0 +1,771 @@
+header {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 25rem) {
+  header {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  header {
+    margin-top: 3rem;
+  }
+}
+
+header .bgHelper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 50rem) {
+  header .bgHelper {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+header #menuBlock {
+  display: none;
+  position: absolute;
+  padding: 2.5rem 1.5rem;
+  top: 4rem;
+  left: 1rem;
+  right: 1rem;
+  border-radius: 8px;
+  background-color: #3b3054;
+  text-align: center;
+}
+
+header #menuBlock .navBlock {
+  border-bottom: 1px solid #9e9aa7;
+}
+
+header #menuBlock li {
+  padding-bottom: 2rem;
+}
+
+header #menuBlock a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+}
+
+header #menuBlock button {
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 2rem;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+}
+
+header #menuBlock button.btnCtaLogin {
+  background-color: transparent;
+}
+
+header #menuBlock button.btnCtaSignUp {
+  border-radius: 2rem;
+  background-color: #2acfcf;
+}
+
+header #menuBlock button:hover, header #menuBlock button:focus {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 25rem) {
+  header #menuBlock {
+    left: 2rem;
+    right: 2rem;
+  }
+}
+
+@media screen and (min-width: 30rem) {
+  header #menuBlock {
+    left: 3rem;
+    right: 3rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  header #menuBlock {
+    left: 4rem;
+    right: 4rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  header #menuBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: initial;
+    background-color: white;
+    padding: 0;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header #menuBlock .navBlock {
+    border-bottom: none;
+  }
+  header #menuBlock ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header #menuBlock li {
+    padding-bottom: 0;
+    margin-left: 1rem;
+  }
+  header #menuBlock li:first-child {
+    margin-left: 2rem;
+  }
+  header #menuBlock a {
+    font-size: 0.8rem;
+    color: #9e9aa7;
+  }
+  header #menuBlock .btnBlock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header #menuBlock button {
+    margin-top: 0;
+    font-size: 0.8rem;
+    color: #9e9aa7;
+    width: 100px;
+  }
+  header #menuBlock .btnCtaSignUp {
+    color: white;
+  }
+}
+
+header #btnToggleMobileMenu {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background: none;
+}
+
+header #btnToggleMobileMenu .line {
+  position: absolute;
+  height: 4px;
+  left: 0;
+  right: 0;
+  background-color: #9e9aa7;
+}
+
+header #btnToggleMobileMenu .line:nth-child(1) {
+  top: 0px;
+}
+
+header #btnToggleMobileMenu .line:nth-child(2) {
+  top: 11px;
+}
+
+header #btnToggleMobileMenu .line:nth-child(3) {
+  bottom: 0px;
+}
+
+header #btnToggleMobileMenu:hover, header #btnToggleMobileMenu:focus {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 50rem) {
+  header #btnToggleMobileMenu {
+    display: none;
+  }
+}
+
+#getStarted {
+  margin-top: 1rem;
+  margin-bottom: 7rem;
+  text-align: center;
+}
+
+#getStarted .imageBox {
+  margin: 0 auto;
+  width: 150%;
+  max-width: 500px;
+}
+
+#getStarted .imageBox img {
+  width: 100%;
+}
+
+#getStarted h1 {
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+#getStarted p {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #9e9aa7;
+  line-height: 21px;
+}
+
+#getStarted button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #2acfcf;
+  font-weight: 700;
+  color: white;
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 50rem) {
+  #getStarted {
+    margin-top: 2rem;
+  }
+  #getStarted .bgHelper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3rem;
+    text-align: left;
+  }
+  #getStarted .imageBox {
+    -webkit-box-flex: 0.75;
+        -ms-flex: 0.75;
+            flex: 0.75;
+  }
+  #getStarted .imageBox img {
+    width: 150%;
+  }
+  #getStarted .textBlock {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  #getStarted .textBlock h1 {
+    font-size: 2.4rem;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 66rem) {
+  #getStarted .textBlock h1 {
+    font-size: 3.5rem;
+  }
+}
+
+#shortenLink {
+  background-color: #f0f1f6;
+}
+
+#shortenLink .bgHelper {
+  -webkit-transform: translateY(-4rem);
+          transform: translateY(-4rem);
+}
+
+#shortenLink #formShortenLink {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #3b3054;
+  background-image: url("../images/bg-shorten-mobile.svg");
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 11rem 6rem;
+}
+
+#shortenLink #formShortenLink .inputContainer {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+#shortenLink #formShortenLink .inputContainer.error {
+  margin-bottom: 2rem;
+}
+
+#shortenLink #formShortenLink .inputContainer.error input {
+  outline: 2px solid #f46262;
+  color: #f46262;
+}
+
+#shortenLink #formShortenLink .inputContainer.error::after {
+  position: absolute;
+  content: "Please add a link";
+  top: 2.8rem;
+  left: 0;
+  font-size: 0.7rem;
+  font-style: italic;
+  color: #f46262;
+}
+
+#shortenLink #formShortenLink input {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 4px;
+}
+
+#shortenLink #formShortenLink button {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background-color: #2acfcf;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  color: white;
+}
+
+#shortenLink .linkBox {
+  margin-top: 1.5rem;
+  border-radius: 4px;
+  background-color: white;
+}
+
+#shortenLink .linkBox p.linkFull {
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+#shortenLink .linkBoxBottom {
+  border-top: 2px solid #f0f1f6;
+  padding: 1rem;
+}
+
+#shortenLink .linkBoxBottom p.linkShort {
+  color: #2acfcf;
+  padding-bottom: 1rem;
+  font-size: 0.8rem;
+}
+
+#shortenLink .linkBoxBottom button {
+  display: block;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background-color: #2acfcf;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  color: white;
+}
+
+@media screen and (min-width: 40rem) {
+  #shortenLink #formShortenLink {
+    padding: 2rem;
+    background-image: url("../images/bg-shorten-desktop.svg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  #shortenLink .bgHelper {
+    -webkit-transform: translateY(-3rem);
+            transform: translateY(-3rem);
+  }
+  #shortenLink #formShortenLink {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem;
+  }
+  #shortenLink #formShortenLink .inputContainer {
+    margin-bottom: 0;
+    width: 75%;
+  }
+  #shortenLink #formShortenLink .inputContainer.error {
+    margin-bottom: 0;
+  }
+  #shortenLink #formShortenLink button {
+    width: 25%;
+  }
+  #shortenLink .linkBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem;
+  }
+  #shortenLink .linkBox p.linkFull {
+    padding: 0;
+    font-size: 1rem;
+  }
+  #shortenLink .linkBoxBottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    border-top: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 300px;
+  }
+  #shortenLink .linkBoxBottom p.linkShort {
+    padding: 0;
+    font-size: 1rem;
+  }
+  #shortenLink .linkBoxBottom button {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  #shortenLink .bgHelper {
+    -webkit-transform: translateY(-4rem);
+            transform: translateY(-4rem);
+  }
+  #shortenLink #formShortenLink {
+    padding: 3rem;
+  }
+}
+
+#statistics {
+  background-color: #f0f1f6;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+#statistics .statisticBoxContainer {
+  position: relative;
+}
+
+#statistics .statisticBoxContainer::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  top: 7rem;
+  bottom: 9rem;
+  left: 50%;
+  background-color: #2acfcf;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+#statistics h2 {
+  font-weight: 700;
+}
+
+#statistics p {
+  margin: 1rem auto 0 auto;
+  max-width: 400px;
+  font-size: 0.9rem;
+  color: #9e9aa7;
+  line-height: 23px;
+}
+
+#statistics .statisticBox {
+  position: relative;
+  margin-top: 4rem;
+  padding: 1.5rem;
+  padding-top: 4rem;
+  border-radius: 4px;
+  background-color: white;
+  z-index: 5;
+}
+
+#statistics .statisticBox .statisticIcon {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  border-radius: 50%;
+  background-color: #3b3054;
+  -webkit-transform: translate(-50%, -6rem);
+          transform: translate(-50%, -6rem);
+}
+
+#statistics .statisticBox .statisticIcon img {
+  width: 50%;
+  height: 50%;
+}
+
+#statistics .statisticBox h3 {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 60rem) {
+  #statistics .statisticBoxContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 3rem;
+    height: 25rem;
+    gap: 2rem;
+    text-align: left;
+  }
+  #statistics .statisticBoxContainer::after {
+    width: unset;
+    height: 8px;
+    top: 50%;
+    bottom: unset;
+    left: 10rem;
+    right: 10rem;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  #statistics .statisticBoxContainer .statisticBox {
+    margin-top: 0;
+  }
+  #statistics .statisticBoxContainer .statisticBox .statisticIcon {
+    left: 0;
+    -webkit-transform: translate(1rem, -6rem);
+            transform: translate(1rem, -6rem);
+  }
+  #statistics .statisticBoxContainer .statisticBox:nth-child(1) {
+    -ms-flex-item-align: baseline;
+        align-self: baseline;
+  }
+  #statistics .statisticBoxContainer .statisticBox:nth-child(3) {
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  #statistics .statisticBoxContainer {
+    gap: 4rem;
+  }
+}
+
+#boost {
+  padding: 4rem 0;
+  background-color: #3b3054;
+  background-image: url("../images/bg-boost-mobile.svg");
+  background-size: cover;
+  text-align: center;
+}
+
+#boost h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+}
+
+#boost button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #2acfcf;
+  font-weight: 700;
+  color: white;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 30rem) {
+  #boost {
+    background-image: url("../images/bg-boost-desktop.svg");
+  }
+}
+
+footer {
+  background-color: #232127;
+  padding: 3rem 0;
+}
+
+footer .bgHelper {
+  text-align: center;
+}
+
+footer .navBlock {
+  margin-top: 2.5rem;
+}
+
+footer .navBlockTitle {
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+footer li {
+  margin-top: 0.5rem;
+}
+
+footer a {
+  font-size: 0.9rem;
+  color: #9e9aa7;
+}
+
+footer .socialMediaBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 170px;
+  margin: 2rem auto 0 auto;
+}
+
+@media screen and (min-width: 50rem) {
+  footer .bgHelper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "logo . features resources company socialmedia";
+    text-align: left;
+  }
+  footer .bgHelper .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: logo;
+  }
+  footer .bgHelper .navBlock,
+  footer .bgHelper .socialMediaBlock {
+    margin-top: 0;
+  }
+  footer .bgHelper .navBlock:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: features;
+  }
+  footer .bgHelper .navBlock:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: resources;
+  }
+  footer .bgHelper .navBlock:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    grid-area: company;
+  }
+  footer .bgHelper .socialMediaBlock {
+    -ms-grid-row: 1;
+    -ms-grid-column: 6;
+    grid-area: socialmedia;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p,
+a,
+button,
+input {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bgHelper {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media screen and (min-width: 25rem) {
+  .bgHelper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 30rem) {
+  .bgHelper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (min-width: 40rem) {
+  .bgHelper {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 50rem) {
+  .bgHelper {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  .bgHelper {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  .bgHelper {
+    width: 80rem;
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=main.css.map */

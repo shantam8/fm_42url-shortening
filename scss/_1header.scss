@@ -1,0 +1,168 @@
+header {
+  margin-top: 1rem;
+  @media screen and(min-width:25rem) {
+    margin-top: 2rem;
+  }
+  @media screen and(min-width:50rem) {
+    margin-top: 3rem;
+  }
+
+  .bgHelper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and(min-width:50rem) {
+      justify-content: flex-start;
+    }
+  }
+
+  #menuBlock {
+    display: none;
+    position: absolute;
+    padding: 2.5rem 1.5rem;
+    top: 4rem;
+    left: 1rem;
+    right: 1rem;
+    border-radius: 8px;
+    background-color: $darkViolet;
+    text-align: center;
+
+    .navBlock {
+      border-bottom: 1px solid $grayishViolet;
+    }
+
+    li {
+      padding-bottom: 2rem;
+    }
+    a {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      height: 2.5rem;
+      margin-top: 2rem;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: white;
+
+      &.btnCtaLogin {
+        background-color: transparent;
+      }
+
+      &.btnCtaSignUp {
+        border-radius: 2rem;
+        background-color: $cyan;
+      }
+
+      &:hover,
+      &:focus {
+        cursor: pointer;
+      }
+    }
+    @media screen and (min-width: 25rem) {
+      left: 2rem;
+      right: 2rem;
+    }
+
+    @media screen and (min-width: 30rem) {
+      left: 3rem;
+      right: 3rem;
+    }
+
+    @media screen and (min-width: 40rem) {
+      left: 4rem;
+      right: 4rem;
+    }
+
+    @media screen and(min-width:50rem) {
+      display: flex;
+      justify-content: space-between;
+      position: initial;
+      background-color: white;
+      padding: 0;
+      width: 100%;
+      align-items: center;
+
+      .navBlock {
+        border-bottom: none;
+      }
+
+      ul {
+        display: flex;
+      }
+
+      li {
+        padding-bottom: 0;
+
+        margin-left: 1rem;
+
+        &:first-child {
+          margin-left: 2rem;
+        }
+      }
+
+      a {
+        font-size: 0.8rem;
+        color: $grayishViolet;
+      }
+
+      .btnBlock {
+        display: flex;
+      }
+
+      button {
+        margin-top: 0;
+        font-size: 0.8rem;
+        color: $grayishViolet;
+        width: 100px;
+      }
+
+      .btnCtaSignUp {
+        color: white;
+      }
+    }
+  }
+
+  #btnToggleMobileMenu {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: none;
+
+    .line {
+      position: absolute;
+      height: 4px;
+      left: 0;
+      right: 0;
+      background-color: $grayishViolet;
+
+      &:nth-child(1) {
+        top: 0px;
+      }
+
+      &:nth-child(2) {
+        top: 11px;
+      }
+
+      &:nth-child(3) {
+        bottom: 0px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+    @media screen and(min-width:50rem) {
+      display: none;
+    }
+  }
+}

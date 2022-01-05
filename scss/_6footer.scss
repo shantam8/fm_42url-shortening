@@ -1,0 +1,71 @@
+footer {
+  background-color: $veryDarkViolet;
+
+  padding: 3rem 0;
+  .bgHelper {
+    text-align: center;
+  }
+
+  .navBlock {
+    margin-top: 2.5rem;
+  }
+
+  .navBlockTitle {
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: white;
+  }
+
+  li {
+    margin-top: 0.5rem;
+  }
+  a {
+    font-size: 0.9rem;
+    color: $grayishViolet;
+  }
+
+  .socialMediaBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 170px;
+    margin: 2rem auto 0 auto;
+  }
+
+  @media screen and (min-width: 50rem) {
+    .bgHelper {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: 1fr;
+      grid-template-areas: "logo . features resources company socialmedia";
+      text-align: left;
+
+      .logo {
+        grid-area: logo;
+      }
+
+      .navBlock,
+      .socialMediaBlock {
+        margin-top: 0;
+      }
+
+      .navBlock:nth-child(2) {
+        grid-area: features;
+      }
+
+      .navBlock:nth-child(3) {
+        grid-area: resources;
+      }
+
+      .navBlock:nth-child(4) {
+        grid-area: company;
+      }
+
+      .socialMediaBlock {
+        grid-area: socialmedia;
+        align-items: flex-start;
+      }
+    }
+  }
+}

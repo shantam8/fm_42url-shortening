@@ -1,0 +1,68 @@
+#getStarted {
+  margin-top: 1rem;
+  margin-bottom: 7rem;
+  text-align: center;
+
+  .imageBox {
+    margin: 0 auto;
+    width: 150%;
+    max-width: 500px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    margin-top: 2rem;
+    font-weight: 700;
+  }
+
+  p {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: $grayishViolet;
+    line-height: 21px;
+  }
+
+  button {
+    @include ctaGetStarted;
+    margin-top: 1.5rem;
+  }
+
+  @media screen and (min-width: 50rem) {
+    margin-top: 2rem;
+
+    .bgHelper {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 3rem;
+      text-align: left;
+    }
+
+    .imageBox {
+      flex: 0.75;
+
+      img {
+        width: 150%;
+      }
+    }
+    .textBlock {
+      flex: 1;
+
+      h1 {
+        font-size: 2.4rem;
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: 66rem) {
+    .textBlock {
+      h1 {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}
