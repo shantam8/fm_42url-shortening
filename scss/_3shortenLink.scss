@@ -73,6 +73,10 @@
 
     button {
       @include ctaButton;
+
+      &.currentlyCopied{
+        background-color: $darkViolet;
+      }
     }
   }
 

@@ -79,8 +79,11 @@ header {
     z-index: 50;
 
     &.open{
-      transform: translateX(0vw);;
-     // display: unset;
+      transform: translateX(0vw);
+    }
+
+    &.displayBlock{
+      display: block;
 
     }
     
@@ -147,6 +150,8 @@ header {
       padding: 0;
       width: 100%;
       align-items: center;
+      transform: translateX(0vw);
+
 
       .navBlock {
         border-bottom: none;

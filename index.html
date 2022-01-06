@@ -17,6 +17,7 @@
     </title>
 
     <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/main.js" defer></script>
   </head>
   <body>
@@ -85,29 +86,18 @@
 
       <section id="shortenLink">
         <div class="bgHelper">
-          <form id="formShortenLink" action="post">
+          <form id="formShortenLink">
             <div class="inputContainer">
-              <input type="text" placeholder="Shorten a link here..." />
+              <input
+                id="inputFieldDomain"
+                type="text"
+                placeholder="Shorten a link here..."
+              />
             </div>
             <button type="submit">Shorten It!</button>
           </form>
 
-          <div id="linkHistory">
-            <div class="linkBox">
-              <p class="linkFull">www.Frontendmentor.io</p>
-              <div class="linkBoxBottom">
-                <p class="linkShort">https://rel.ink/3g8sd2</p>
-                <button class="btnCopy">Copy</button>
-              </div>
-            </div>
-            <div class="linkBox">
-              <p class="linkFull">www.Frontendmentor.io</p>
-              <div class="linkBoxBottom">
-                <p class="linkShort">https://rel.ink/3g8sd2</p>
-                <button class="btnCopy">Copy</button>
-              </div>
-            </div>
-          </div>
+          <div id="linkHistory"></div>
         </div>
       </section>
 
