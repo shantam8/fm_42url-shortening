@@ -421,7 +421,7 @@ header #btnToggleMobileMenu:hover, header #btnToggleMobileMenu:focus {
 
 #shortenLink #formShortenLink .inputContainer.error::after {
   position: absolute;
-  content: "Please add a link";
+  content: var(--errorText);
   top: 2.8rem;
   left: 0;
   font-size: 0.7rem;
@@ -877,6 +877,10 @@ footer .socialMediaIcon:active svg path {
         grid-template-columns: repeat(6, 1fr);
         grid-template-areas: "logo . features resources company socialmedia";
   }
+}
+
+:root {
+  --errorText: "Please add a link";
 }
 
 * {

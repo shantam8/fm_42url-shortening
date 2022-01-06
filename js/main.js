@@ -1,3 +1,5 @@
+const root = document.querySelector(":root");
+
 let btnToggleMobileMenu = document.querySelector("#btnToggleMobileMenu");
 let menuBlock = document.querySelector("#menuBlock");
 let body = document.querySelector("body");
@@ -15,7 +17,6 @@ function handleFormSubmit(event) {
   event.preventDefault();
   let regexDomain =
     /^((?:([a-z0-9]\.|[a-z0-9][a-z0-9\-]{0,61}[a-z0-9])\.)+)([a-z0-9]{2,63}|(?:[a-z0-9][a-z0-9\-]{0,61}[a-z0-9]))\.?$/;
-
   let myUrl;
   let myShortenedUrl;
   let tmpDoubleEntry = false;
@@ -39,6 +40,8 @@ function handleFormSubmit(event) {
     inputContainer.classList.remove("error");
     myUrl = inputFieldDomain.value;
   } else {
+    root.style.setProperty("--errorText", `"Please add a link"`);
+
     inputContainer.classList.add("error");
     return;
   }
@@ -54,7 +57,11 @@ function handleFormSubmit(event) {
       inputFieldDomain.value == "";
     })
     .catch((error) => {
-      console.log(error);
+      root.style.setProperty(
+        "--errorText",
+        `"${error.response.data.disallowed_reason}"`
+      );
+      inputContainer.classList.add("error");
     });
 }
 

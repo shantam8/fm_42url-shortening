@@ -9,6 +9,11 @@
 @import "5boost";
 @import "6footer";
 
+
+:root{
+  --errorText: "Please add a link";
+}
+
 * {
   margin: 0;
   padding: 0;
