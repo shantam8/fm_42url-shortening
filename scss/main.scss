@@ -16,7 +16,31 @@
 }
 
 body {
+  position: relative;
   overflow-x: hidden;
+
+  &.backdropActive {
+    overflow-y: hidden;
+
+    @media screen and (min-width: 50rem) {
+      overflow-y: visible;
+    }
+  }
+}
+
+#backdrop.active {
+  position: absolute;
+  width: 100vw;
+  height: 110vh;
+  top: -4rem;
+  left: 0;
+  overflow: hidden;
+  background-color: rgba(128, 128, 128, 0.3);
+  z-index: 20;
+
+  @media screen and (min-width: 50rem) {
+    display: none;
+  }
 }
 
 h1,
@@ -39,8 +63,8 @@ a {
 }
 
 .bgHelper {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   @media screen and (min-width: 25rem) {
     padding-left: 2rem;
@@ -56,10 +80,10 @@ a {
     padding-left: 4rem;
     padding-right: 4rem;
   }
-  
+
   @media screen and (min-width: 50rem) {
     padding-left: 5rem;
-    padding-right:5rem;
+    padding-right: 5rem;
   }
 
   @media screen and (min-width: 60rem) {

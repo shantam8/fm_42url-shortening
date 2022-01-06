@@ -1,4 +1,5 @@
-@mixin ctaGetStarted {
+@mixin ctaGetStarted() {
+  @include btnHoverEffects();
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 2rem;
@@ -8,6 +9,7 @@
 }
 
 @mixin ctaButton() {
+  @include btnHoverEffects();
   display: block;
   width: 100%;
   padding: 0.7rem 1rem;
@@ -18,3 +20,31 @@
   color: white;
 }
 
+@mixin btnHoverEffects() {
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($cyan, 25%);
+    cursor: pointer;
+  }
+
+  &:active {
+    color: $red;
+  }
+}
+
+@mixin headerLinkEffects() {
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $veryDarkViolet;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: $cyan;
+    transition: color 0.05s ease-in-out;
+  }
+}

@@ -14,6 +14,11 @@ header {
   }
 }
 
+header .logo {
+  position: relative;
+  z-index: 50;
+}
+
 header .bgHelper {
   position: relative;
   display: -webkit-box;
@@ -35,6 +40,46 @@ header .bgHelper {
   }
 }
 
+header #btnToggleMobileMenu {
+  position: relative;
+  z-index: 50;
+}
+
+header #btnToggleMobileMenu .line {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+header #btnToggleMobileMenu:hover .line:nth-child(1), header #btnToggleMobileMenu:focus .line:nth-child(1) {
+  -webkit-transform: rotate(-45deg) translateX(-4px);
+          transform: rotate(-45deg) translateX(-4px);
+}
+
+header #btnToggleMobileMenu:hover .line:nth-child(2), header #btnToggleMobileMenu:focus .line:nth-child(2) {
+  -webkit-transform: translate(3px);
+          transform: translate(3px);
+}
+
+header #btnToggleMobileMenu:hover .line:nth-child(3), header #btnToggleMobileMenu:focus .line:nth-child(3) {
+  -webkit-transform: rotate(45deg) translateX(-4px);
+          transform: rotate(45deg) translateX(-4px);
+}
+
+header #btnToggleMobileMenu.menuOpen:hover .line:nth-child(1), header #btnToggleMobileMenu.menuOpen:focus .line:nth-child(1) {
+  -webkit-transform: rotate(45deg) translateX(4px);
+          transform: rotate(45deg) translateX(4px);
+}
+
+header #btnToggleMobileMenu.menuOpen:hover .line:nth-child(2), header #btnToggleMobileMenu.menuOpen:focus .line:nth-child(2) {
+  -webkit-transform: translate(-3px);
+          transform: translate(-3px);
+}
+
+header #btnToggleMobileMenu.menuOpen:hover .line:nth-child(3), header #btnToggleMobileMenu.menuOpen:focus .line:nth-child(3) {
+  -webkit-transform: rotate(-45deg) translateX(4px);
+          transform: rotate(-45deg) translateX(4px);
+}
+
 header #menuBlock {
   display: none;
   position: absolute;
@@ -45,6 +90,16 @@ header #menuBlock {
   border-radius: 8px;
   background-color: #3b3054;
   text-align: center;
+  -webkit-transform: translateX(92vw);
+          transform: translateX(92vw);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 50;
+}
+
+header #menuBlock.open {
+  -webkit-transform: translateX(0vw);
+          transform: translateX(0vw);
 }
 
 header #menuBlock .navBlock {
@@ -59,6 +114,10 @@ header #menuBlock a {
   font-size: 1.2rem;
   font-weight: 700;
   color: white;
+}
+
+header #menuBlock a:active {
+  color: red;
 }
 
 header #menuBlock button {
@@ -81,8 +140,8 @@ header #menuBlock button.btnCtaSignUp {
   background-color: #2acfcf;
 }
 
-header #menuBlock button:hover, header #menuBlock button:focus {
-  cursor: pointer;
+header #menuBlock button:active {
+  color: red;
 }
 
 @media screen and (min-width: 25rem) {
@@ -131,15 +190,27 @@ header #menuBlock button:hover, header #menuBlock button:focus {
     display: flex;
   }
   header #menuBlock li {
-    padding-bottom: 0;
     margin-left: 1rem;
+    padding-bottom: 0;
   }
   header #menuBlock li:first-child {
     margin-left: 2rem;
   }
   header #menuBlock a {
+    -webkit-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
     font-size: 0.8rem;
     color: #9e9aa7;
+    transition: color 0.2s ease-in-out;
+  }
+  header #menuBlock a:hover, header #menuBlock a:focus {
+    color: #232127;
+    cursor: pointer;
+  }
+  header #menuBlock a:active {
+    color: #2acfcf;
+    -webkit-transition: color 0.05s ease-in-out;
+    transition: color 0.05s ease-in-out;
   }
   header #menuBlock .btnBlock {
     display: -webkit-box;
@@ -147,13 +218,35 @@ header #menuBlock button:hover, header #menuBlock button:focus {
     display: flex;
   }
   header #menuBlock button {
+    width: 100px;
     margin-top: 0;
     font-size: 0.8rem;
     color: #9e9aa7;
-    width: 100px;
+  }
+  header #menuBlock .btnCtaLogin {
+    -webkit-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+  }
+  header #menuBlock .btnCtaLogin:hover, header #menuBlock .btnCtaLogin:focus {
+    color: #232127;
+    cursor: pointer;
+  }
+  header #menuBlock .btnCtaLogin:active {
+    color: #2acfcf;
+    -webkit-transition: color 0.05s ease-in-out;
+    transition: color 0.05s ease-in-out;
   }
   header #menuBlock .btnCtaSignUp {
+    -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
     color: white;
+  }
+  header #menuBlock .btnCtaSignUp:hover, header #menuBlock .btnCtaSignUp:focus {
+    background-color: #91e8e8;
+    cursor: pointer;
+  }
+  header #menuBlock .btnCtaSignUp:active {
+    color: #f46262;
   }
 }
 
@@ -224,6 +317,8 @@ header #btnToggleMobileMenu:hover, header #btnToggleMobileMenu:focus {
 }
 
 #getStarted button {
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 2rem;
@@ -231,6 +326,15 @@ header #btnToggleMobileMenu:hover, header #btnToggleMobileMenu:focus {
   font-weight: 700;
   color: white;
   margin-top: 1.5rem;
+}
+
+#getStarted button:hover, #getStarted button:focus {
+  background-color: #91e8e8;
+  cursor: pointer;
+}
+
+#getStarted button:active {
+  color: #f46262;
 }
 
 @media screen and (min-width: 50rem) {
@@ -328,6 +432,8 @@ header #btnToggleMobileMenu:hover, header #btnToggleMobileMenu:focus {
 }
 
 #shortenLink #formShortenLink button {
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   display: block;
   width: 100%;
   padding: 0.7rem 1rem;
@@ -336,6 +442,15 @@ header #btnToggleMobileMenu:hover, header #btnToggleMobileMenu:focus {
   border-radius: 4px;
   font-weight: 700;
   color: white;
+}
+
+#shortenLink #formShortenLink button:hover, #shortenLink #formShortenLink button:focus {
+  background-color: #91e8e8;
+  cursor: pointer;
+}
+
+#shortenLink #formShortenLink button:active {
+  color: #f46262;
 }
 
 #shortenLink .linkBox {
@@ -361,6 +476,8 @@ header #btnToggleMobileMenu:hover, header #btnToggleMobileMenu:focus {
 }
 
 #shortenLink .linkBoxBottom button {
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   display: block;
   width: 100%;
   padding: 0.7rem 1rem;
@@ -369,6 +486,15 @@ header #btnToggleMobileMenu:hover, header #btnToggleMobileMenu:focus {
   border-radius: 4px;
   font-weight: 700;
   color: white;
+}
+
+#shortenLink .linkBoxBottom button:hover, #shortenLink .linkBoxBottom button:focus {
+  background-color: #91e8e8;
+  cursor: pointer;
+}
+
+#shortenLink .linkBoxBottom button:active {
+  color: #f46262;
 }
 
 @media screen and (min-width: 40rem) {
@@ -535,7 +661,7 @@ header #btnToggleMobileMenu:hover, header #btnToggleMobileMenu:focus {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 3rem;
-    height: 25rem;
+    height: 20rem;
     gap: 2rem;
     text-align: left;
   }
@@ -589,6 +715,8 @@ header #btnToggleMobileMenu:hover, header #btnToggleMobileMenu:focus {
 }
 
 #boost button {
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
   padding: 0.8rem 2rem;
   border: none;
   border-radius: 2rem;
@@ -596,6 +724,15 @@ header #btnToggleMobileMenu:hover, header #btnToggleMobileMenu:focus {
   font-weight: 700;
   color: white;
   margin-top: 1rem;
+}
+
+#boost button:hover, #boost button:focus {
+  background-color: #91e8e8;
+  cursor: pointer;
+}
+
+#boost button:active {
+  color: #f46262;
 }
 
 @media screen and (min-width: 30rem) {
@@ -626,6 +763,20 @@ footer .navBlockTitle {
 
 footer li {
   margin-top: 0.5rem;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+footer li:hover, footer li:focus {
+  cursor: pointer;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+footer li:active a {
+  color: #2acfcf;
 }
 
 footer a {
@@ -647,16 +798,34 @@ footer .socialMediaBlock {
   margin: 2rem auto 0 auto;
 }
 
+footer .socialMediaIcon {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+footer .socialMediaIcon:hover, footer .socialMediaIcon:focus {
+  cursor: pointer;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+footer .socialMediaIcon:active svg path {
+  fill: #2acfcf;
+}
+
 @media screen and (min-width: 50rem) {
   footer .bgHelper {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[6];
-        grid-template-columns: repeat(6, 1fr);
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
-        grid-template-areas: "logo . features resources company socialmedia";
+        grid-template-areas: "logo features resources company socialmedia";
     text-align: left;
+    gap: 1rem;
   }
   footer .bgHelper .logo {
     -ms-grid-row: 1;
@@ -669,26 +838,34 @@ footer .socialMediaBlock {
   }
   footer .bgHelper .navBlock:nth-child(2) {
     -ms-grid-row: 1;
-    -ms-grid-column: 3;
+    -ms-grid-column: 2;
     grid-area: features;
   }
   footer .bgHelper .navBlock:nth-child(3) {
     -ms-grid-row: 1;
-    -ms-grid-column: 4;
+    -ms-grid-column: 3;
     grid-area: resources;
   }
   footer .bgHelper .navBlock:nth-child(4) {
     -ms-grid-row: 1;
-    -ms-grid-column: 5;
+    -ms-grid-column: 4;
     grid-area: company;
   }
   footer .bgHelper .socialMediaBlock {
     -ms-grid-row: 1;
-    -ms-grid-column: 6;
+    -ms-grid-column: 5;
     grid-area: socialmedia;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+}
+
+@media screen and (min-width: 60rem) {
+  footer .bgHelper {
+    -ms-grid-columns: (1fr)[6];
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: "logo . features resources company socialmedia";
   }
 }
 
@@ -700,7 +877,35 @@ footer .socialMediaBlock {
 }
 
 body {
+  position: relative;
   overflow-x: hidden;
+}
+
+body.backdropActive {
+  overflow-y: hidden;
+}
+
+@media screen and (min-width: 50rem) {
+  body.backdropActive {
+    overflow-y: visible;
+  }
+}
+
+#backdrop.active {
+  position: absolute;
+  width: 100vw;
+  height: 110vh;
+  top: -4rem;
+  left: 0;
+  overflow: hidden;
+  background-color: rgba(128, 128, 128, 0.3);
+  z-index: 20;
+}
+
+@media screen and (min-width: 50rem) {
+  #backdrop.active {
+    display: none;
+  }
 }
 
 h1,
