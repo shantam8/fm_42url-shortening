@@ -106,7 +106,7 @@ header #menuBlock.displayBlock {
   display: block;
 }
 
-header #menuBlock .navBlock {
+header #menuBlock #navBlock {
   border-bottom: 1px solid #9e9aa7;
 }
 
@@ -187,7 +187,7 @@ header #menuBlock button:active {
     -webkit-transform: translateX(0vw);
             transform: translateX(0vw);
   }
-  header #menuBlock .navBlock {
+  header #menuBlock #navBlock {
     border-bottom: none;
   }
   header #menuBlock ul {
