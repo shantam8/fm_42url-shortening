@@ -16,7 +16,7 @@ let btnActiveCopy;
 function handleFormSubmit(event) {
   event.preventDefault();
   let regexDomain =
-    /^((?:([a-z0-9]\.|[a-z0-9][a-z0-9\-]{0,61}[a-z0-9])\.)+)([a-z0-9]{2,63}|(?:[a-z0-9][a-z0-9\-]{0,61}[a-z0-9]))\.?$/;
+    /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/;
   let myUrl;
   let myShortenedUrl;
   let tmpDoubleEntry = false;
